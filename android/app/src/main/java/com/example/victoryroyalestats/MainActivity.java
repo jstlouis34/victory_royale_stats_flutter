@@ -1,4 +1,4 @@
-package com.example.victoryroyalestatsflutter;
+package com.example.victoryroyalestats;
 
 import android.os.Bundle;
 

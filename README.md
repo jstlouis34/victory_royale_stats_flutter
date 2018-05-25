@@ -1,4 +1,4 @@
-# victory_royale_stats_flutter
+# victory_royale_stats
 
 A new Flutter project.
 
