@@ -51,46 +51,270 @@ class StatsPage extends StatelessWidget {
             ),
           ),
           new Padding(
-            padding: new EdgeInsets.all(30.0),
+            padding: new EdgeInsets.all(10.0),
           ),
-          new Center(
-            child: new TextField(
-              decoration: new InputDecoration(hintText: 'Enter Your GamerTag'),
-              style: new TextStyle(
-                color: Colors.black,
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Text('GamerTag:'),
               ),
-            ),
+              new Expanded(
+                child: new Text('Text'),
+              ),
+            ],
+          ),
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Text('Platform:'),
+              ),
+              new Expanded(
+                child: new Text('Text'),
+              ),
+            ],
           ),
           new Padding(
-            padding: new EdgeInsets.all(30.0),
+            padding: new EdgeInsets.all(10.0),
           ),
-          new Center(
-            child: new Text(
-              'Select Platform',
-              style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0),
-            ),
-          ),
-          new Center(
-            child: new DropdownButton<String>(
-              hint: new Text(
-                'Playstation 4',
-                style: new TextStyle(fontSize: 20.0),
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Text(
+                  'OVERALL',
+                  style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
                 ),
-              items:
-                  <String>['Playstation 4', 'PC', 'Xbox'].map((String value) {
-                return new DropdownMenuItem<String>(
-                  value: value,
-                  child: new Text(
-                    value,
-                    style: new TextStyle(fontSize: 20.0),
-                    ),
-                );
-              }).toList(),
-              onChanged: (_) {},
-            ),
+              ),
+            ],
+          ),
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Text('Wins:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+              new Expanded(
+                child: new Text('Kills:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+            ],
+          ),
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Text('K/D:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+              new Expanded(
+                child: new Text('Win %:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+            ],
+          ),
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Text('Score:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+              new Expanded(
+                child: new Text('Matches:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+            ],
           ),
           new Padding(
-            padding: new EdgeInsets.all(30.0),
+            padding: new EdgeInsets.all(10.0),
+          ),
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Text(
+                  'SOLOS',
+                  style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+                ),
+              ),
+            ],
+          ),
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Text('Wins:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+              new Expanded(
+                child: new Text('Kills:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+            ],
+          ),
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Text('K/D:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+              new Expanded(
+                child: new Text('Win %:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+            ],
+          ),
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Text('Score:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+              new Expanded(
+                child: new Text('Matches:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+            ],
+          ),
+          new Padding(
+            padding: new EdgeInsets.all(10.0),
+          ),new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Text(
+                  'DUOS',
+                  style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+                ),
+              ),
+            ],
+          ),
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Text('Wins:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+              new Expanded(
+                child: new Text('Kills:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+            ],
+          ),
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Text('K/D:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+              new Expanded(
+                child: new Text('Win %:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+            ],
+          ),
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Text('Score:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+              new Expanded(
+                child: new Text('Matches:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+            ],
+          ),
+          new Padding(
+            padding: new EdgeInsets.all(10.0),
+          ),
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Text(
+                  'SQUADS',
+                  style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+                ),
+              ),
+            ],
+          ),
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Text('Wins:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+              new Expanded(
+                child: new Text('Kills:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+            ],
+          ),
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Text('K/D:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+              new Expanded(
+                child: new Text('Win %:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+            ],
+          ),
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Text('Score:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+              new Expanded(
+                child: new Text('Matches:'),
+              ),
+              new Expanded(
+                child: new Text('#'),
+              ),
+            ],
           ),
         ], // Widget
       ),
