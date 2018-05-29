@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zoomable_image/zoomable_image.dart';
 
 class LlamasPage extends StatelessWidget {
   final String pageText;
@@ -12,12 +13,9 @@ class LlamasPage extends StatelessWidget {
           title: new Text('Battle Royale Llamas'),
         ),
         backgroundColor: new Color(0x0C2132),
-        body: new Container(
-          decoration: new BoxDecoration(
-              image: new DecorationImage(
-            image: new AssetImage('assets/llamas.png'),
-            fit: BoxFit.contain,
-          )),
+        body: new ZoomableImage(
+          new AssetImage('assets/llamas.png'),
+          placeholder: const Center(child: const CircularProgressIndicator()),
         ));
   }
 }

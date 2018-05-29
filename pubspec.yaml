@@ -4,6 +4,9 @@ description: A new Flutter project.
 dependencies:
   flutter:
     sdk: flutter
+  zoomable_image: "^1.2.0"
+
+
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -38,6 +41,7 @@ flutter:
     - assets/map.jpg
     - assets/llamas.png
     - assets/chests.png
+    - assets/fbr.png
     
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

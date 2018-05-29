@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'map.dart';
 import 'llamas.dart';
 import 'chests.dart';
+import 'stats.dart';
 
 void main() => runApp(new VictoryRoyale());
 
@@ -187,7 +189,7 @@ class _MyHomePageState extends State<MyHomePage> {
               color: Colors.purple,
               textColor: Colors.white,
               child: new Text('Get Stats'),
-              onPressed: null,
+              onPressed: () => Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context)=> new StatsPage('Stats Page'))),
             ),
           ),
         ], // Widget
