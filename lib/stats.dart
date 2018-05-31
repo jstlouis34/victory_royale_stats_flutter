@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class StatsPage extends StatelessWidget {
-  final String pageText;
+  final String gamerTag;
+  final String platform;
 
-  StatsPage(this.pageText);
+  StatsPage(this.gamerTag, this.platform);
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +60,7 @@ class StatsPage extends StatelessWidget {
                 child: new Text('GamerTag:'),
               ),
               new Expanded(
-                child: new Text('Text'),
+                child: new Text(gamerTag),
               ),
             ],
           ),
@@ -69,7 +70,7 @@ class StatsPage extends StatelessWidget {
                 child: new Text('Platform:'),
               ),
               new Expanded(
-                child: new Text('Text'),
+                child: new Text(platform),
               ),
             ],
           ),

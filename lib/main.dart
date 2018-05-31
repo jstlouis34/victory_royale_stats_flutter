@@ -36,12 +36,18 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final myController = new TextEditingController();
+
+  String gamerTag = '';
+  String platform = '';
+
+  String _value = null;
+  List<String> _values = new List<String>();
 
   @override
-    void dispose() {
-      myController.dispose();
-      super.dispose();
+    void initState() {
+      _values.addAll(['Playstation 4', 'Xbox', 'PC']);
+      _value = _values.elementAt(0);
+      //super.initState();
     }
 
   @override
@@ -128,12 +134,17 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           new Center(
             child: new TextField(
-              controller: myController,
               decoration: new InputDecoration(hintText: 'Enter Your GamerTag'),
+              onSubmitted: (String str){
+                setState((){
+                  gamerTag = str;
+                });
+              },
               style: new TextStyle(
                 color: Colors.black,
               ),
             ),
+            
           ),
           new Padding(
             padding: new EdgeInsets.all(30.0),
@@ -145,13 +156,9 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           new Center(
-            child: new DropdownButton<String>(
-              hint: new Text(
-                'Playstation 4',
-                style: new TextStyle(fontSize: 20.0),
-                ),
-              items:
-                  <String>['Playstation 4', 'PC', 'Xbox'].map((String value) {
+            child: new DropdownButton(
+              value: _value,
+              items: _values.map((String value) {
                 return new DropdownMenuItem<String>(
                   value: value,
                   child: new Text(
@@ -160,7 +167,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                 );
               }).toList(),
-              onChanged: (_) {},
+              onChanged: (String str){
+                setState((){
+                  _value = str;
+                  platform = str;
+                });
+              },
             ),
           ),
           new Padding(
@@ -173,7 +185,7 @@ class _MyHomePageState extends State<MyHomePage> {
               color: Colors.purple,
               textColor: Colors.white,
               child: new Text('Get Stats'),
-              onPressed: () => Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context)=> new StatsPage('Stats Page'))),
+              onPressed: () => Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context)=> new StatsPage(gamerTag, platform))),
             ),
           ),
         ], // Widget
